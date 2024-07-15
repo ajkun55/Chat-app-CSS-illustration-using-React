@@ -274,6 +274,20 @@ main {
     left: -20vw;
     top: -30vh;
   }
+  body::after {
+    content: "";
+    width: 30vw;
+    height: 80vh;
+    background: hsl(270, 20%, 94%);
+    position: absolute;
+    right: -10vw;
+    bottom: -25vh;
+    border-top-left-radius: 40rem;
+    border-top-right-radius: 40rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
   .text {
     text-align: start;
   }
