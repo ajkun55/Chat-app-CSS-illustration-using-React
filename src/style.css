@@ -1,0 +1,292 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap");
+
+:root {
+  --clr-Pale-Violet: hsl(276, 100%, 81%);
+  --clr-Moderate-Violet: hsl(276, 55%, 52%);
+  --clr-Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --clr-Grayish-Blue: hsl(206, 6%, 79%);
+  --clr-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --clr-DarkGrayish-Violet: hsl(270, 7%, 64%);
+
+  --clr-Light-Magenta: hsl(293, 100%, 63%);
+  --clr-Light-Violet: hsl(264, 100%, 61%);
+
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --clr-Very-Dark-Desaturated-Violet-2: hsl(271, 36%, 24%);
+  --clr-Very-Light-Magenta: hsl(289, 100%, 72%);
+  --fw-5: 500;
+  --fw-7: 700;
+}
+
+/*
+### Primary
+
+#### Text
+
+- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+
+#### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+- Light Magenta: hsl(293, 100%, 63%)
+- Light Violet: hsl(264, 100%, 61%)
+
+### Secondary
+
+- White: hsl(0, 0%, 100%)
+- Light Grayish Violet (app background): hsl(270, 20%, 96%)
+- Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+- Very Light Magenta (radio button outline): hsl(289, 100%, 72%)
+*/
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--clr-Light-Grayish-Violet);
+}
+
+.page {
+  background-color: var(--clr-Light-Grayish-Violet);
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  margin: auto;
+  border-radius: 0 0 1.6rem 1.6rem;
+  padding-bottom: 0.5rem;
+}
+.app {
+  background-color: var(--clr-White);
+  width: 250px;
+  margin-inline: auto;
+  padding-block: 10px;
+  border-radius: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 2rem 0 hsl(270, 7%, 74%);
+}
+
+body::before {
+  content: "";
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(
+    var(--clr-Light-Magenta) 5%,
+    var(--clr-Light-Violet) 100%
+  );
+  position: absolute;
+  left: 0;
+  top: -20vh;
+  border-bottom-right-radius: 40rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  margin-right: auto;
+  margin-left: 10px;
+  width: fit-content;
+  color: var(--clr-Moderate-Violet);
+  background-color: hsl(270, 20%, 90%);
+  border-radius: 1rem 1rem 1rem 0.5rem;
+}
+
+.right {
+  margin-left: auto;
+  margin-right: 10px;
+  width: fit-content;
+  color: var(--clr-Desaturated-Dark-Violet);
+}
+
+.msg {
+  margin-block: 10px;
+  padding: 0.5rem;
+  width: 8rem;
+  font-size: 0.5rem;
+}
+.only-text {
+  background-color: var(--clr-White);
+  border-radius: 1rem 1rem 0.5rem 1rem;
+}
+
+.text {
+  text-align: center;
+  margin-inline: auto;
+  width: 80%;
+  max-width: 440px;
+}
+
+.msg-img {
+  max-width: 2.5rem;
+  border-radius: 0.5rem;
+  margin-left: 6px;
+}
+
+.images {
+  width: 9rem;
+}
+
+::placeholder {
+  color: var(--clr-Grayish-Blue);
+}
+
+h1 {
+  color: var(--clr-Very-Dark-Desaturated-Violet);
+  margin-block: 1.5rem;
+}
+
+.text p {
+  color: var(--clr-DarkGrayish-Violet);
+}
+
+.header {
+  background: linear-gradient(
+    -90deg,
+    var(--clr-Light-Magenta),
+    var(--clr-Light-Violet)
+  );
+  padding: 1.4rem 10px 8px;
+  border-radius: 1.6rem 1.6rem 0.5rem 0.5rem;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  width: 60%;
+  height: 1.5rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--clr-White);
+  border-radius: 3rem;
+}
+.name {
+  font-size: 0.8rem;
+}
+
+.status {
+  color: var(--clr-Grayish-Blue);
+  font-size: 0.6rem;
+}
+
+.avatar {
+  max-width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--clr-White);
+  margin-inline: 10px;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  width: 10rem;
+  font-size: 0.8rem;
+}
+
+input[type="radio"] {
+  border: 1px solid var(--clr-Very-Light-Magenta);
+}
+
+.exercise {
+  background: linear-gradient(
+    90deg,
+    var(--clr-Light-Magenta),
+    var(--clr-Light-Violet)
+  );
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+.exercise div {
+  display: flex;
+}
+button {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--clr-Very-Dark-Desaturated-Violet-2);
+  color: var(--clr-White);
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  right: 10px;
+}
+
+.sendbox {
+  margin: 10px;
+  height: 2rem;
+  background-color: var(--clr-White);
+  padding-inline: 1rem;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.price {
+  color: var(--clr-White);
+  margin-inline: 10px;
+  font-weight: var(--fw-7);
+}
+
+.exercise-text {
+  color: var(--clr-Pale-Violet);
+  margin-left: 10px;
+  flex: 1;
+}
+
+.white {
+  color: var(--clr-White);
+  font-weight: var(--fw-7);
+}
+
+.right-symbol {
+  margin-left: auto;
+}
+
+main {
+  margin-top: 6rem;
+}
+
+@media (width > 650px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+    max-width: 810px;
+    margin: 8rem auto;
+  }
+  body::before {
+    width: 50vw;
+    height: 130vh;
+    border-bottom-left-radius: 40rem;
+    left: -20vw;
+    top: -30vh;
+  }
+  .text {
+    text-align: start;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
